@@ -31,6 +31,7 @@ public class BeatBoxFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         //Initialises the set of the sound files from an asset
         mBeatBox = new BeatBox(getActivity());
     }
