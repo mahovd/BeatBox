@@ -22,7 +22,7 @@ public class BeatBox {
     private static final int MAX_SOUNDS = 5;
 
     private AssetManager mAssets;
-    private List<Sound> mSounds = new ArrayList<>();
+    private List<Sound> mSounds;
     private SoundPool mSoundPool;
 
     //BeatBox constructor
@@ -59,6 +59,8 @@ public class BeatBox {
             Log.e(TAG,"Couldn't list assets",ioe);
         }
 
+
+        mSounds = new ArrayList<>();
         for (String filename : soundNames){
             try {
                 String assetPath = SOUNDS_FOLDER + "/" + filename;

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,6 @@ import java.util.List;
 public class BeatBoxFragment extends Fragment {
 
     private BeatBox mBeatBox;
-    private Sound mSound;
 
     public static BeatBoxFragment newInstance() {
 
@@ -61,6 +61,7 @@ public class BeatBoxFragment extends Fragment {
     private class SoundHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private Button mButton;
+        private Sound mSound;
 
         public SoundHolder(LayoutInflater inflater, ViewGroup container){
             super(inflater.inflate(R.layout.list_item_sound,container,false));
